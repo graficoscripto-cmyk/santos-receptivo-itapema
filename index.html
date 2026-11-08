@@ -13,13 +13,14 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:url" content="https://santos-receptivo-itapema.vercel.app/">
   <meta property="og:title" content="Santos Receptivo &amp; Turismo | Passeios e Transfers Executivos em SC">
-  <meta property="og:description" content="Carros executivos até 6 lugares com motorista-guia (Márcio Santos). Transfers de aeroportos, Beto Carrero, Pomerode, Bombinhas e Serra Catarinense. ★ 5,0 no Google.">
-  <meta property="og:image" content="https://santos-receptivo-itapema.vercel.app/img/og-santos-receptivo-v1.jpg">
+  <meta property="og:description" content="Frota executiva até 6 lugares com motorista-guia (Márcio Santos). Transfers de aeroportos, Beto Carrero, Pomerode, Bombinhas e Serra Catarinense. ★ 5,0 no Google.">
+  <meta property="og:image" content="https://santos-receptivo-itapema.vercel.app/img/og-santos-receptivo-v2.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Playfair+Display:ital,wght@1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -32,7 +33,8 @@
     "name": "Santos Receptivo & Turismo",
     "alternateName": "Santos Turismo e receptivo",
     "url": "https://santos-receptivo-itapema.vercel.app/",
-    "image": "https://santos-receptivo-itapema.vercel.app/img/og-santos-receptivo-v1.jpg",
+    "logo": "https://santos-receptivo-itapema.vercel.app/img/logo-oficial.webp",
+    "image": "https://santos-receptivo-itapema.vercel.app/img/og-santos-receptivo-v2.jpg",
     "telephone": "+55-47-98811-1437",
     "address": {
       "@type": "PostalAddress",
@@ -205,7 +207,7 @@
       pointer-events: auto;
       max-width: 1160px;
       margin: 0 auto;
-      padding: 10px 16px;
+      padding: 8px 16px;
       background: rgba(8, 28, 58, 0.92);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
@@ -219,14 +221,41 @@
     }
 
     .brand-logo {
-      display: flex;
+      display: inline-flex;
       align-items: center;
+      gap: 10px;
       flex-shrink: 0;
     }
 
-    .brand-logo img {
-      height: 38px;
-      width: auto;
+    .brand-logo-img {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: contain;
+      flex-shrink: 0;
+      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
+    }
+
+    .brand-logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .brand-logo-text strong {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-logo-text span {
+      font-size: 0.64rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      color: var(--gold-primary);
+      text-transform: uppercase;
     }
 
     .nav-links {
@@ -273,7 +302,7 @@
     .hero {
       background: linear-gradient(165deg, var(--navy-deep) 0%, var(--navy-royal) 100%);
       color: var(--text-light);
-      padding: 84px 0 64px;
+      padding: 88px 0 64px;
       position: relative;
       overflow: hidden;
     }
@@ -298,10 +327,11 @@
 
     .hero-media picture,
     .hero-media img {
+      display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 58%;
+      object-position: center 45%;
     }
 
     .hero-media-caption {
@@ -314,7 +344,7 @@
       justify-content: space-between;
       gap: 8px;
       padding: 10px 14px;
-      background: rgba(8, 28, 58, 0.86);
+      background: rgba(8, 28, 58, 0.88);
       backdrop-filter: blur(8px);
       border-radius: var(--radius-sm);
       border: 1px solid rgba(255, 255, 255, 0.14);
@@ -1029,6 +1059,21 @@
       border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
+    .footer-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .footer-brand img {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      object-fit: contain;
+      filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.4));
+    }
+
     .footer-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -1147,12 +1192,16 @@
 </head>
 <body>
 
-  <!-- Compact Auto-Hiding Header -->
+  <!-- Compact Auto-Hiding Header with Official Circular Logo (Transparent Background) -->
   <header class="navbar" id="mainNavbar">
     <div class="container">
       <nav class="navbar-inner" aria-label="Navegação Principal">
         <a href="#topo" class="brand-logo" aria-label="Santos Receptivo & Turismo">
-          <img src="img/logo-santos.svg" alt="Santos Receptivo & Turismo" width="185" height="40">
+          <img src="img/logo-oficial.webp" alt="Logo Santos Receptivo Turismo" class="brand-logo-img" width="44" height="44">
+          <div class="brand-logo-text">
+            <strong>Santos</strong>
+            <span>Receptivo &amp; Turismo</span>
+          </div>
         </a>
         <ul class="nav-links">
           <li><a href="#roteiros">Roteiros &amp; Transfers</a></li>
@@ -1173,11 +1222,11 @@
         <div class="hero-grid">
           <div class="hero-media reveal is-visible">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/hero-1080.webp">
-              <img src="img/hero-2400.webp" alt="Veículo executivo da Santos Receptivo & Turismo na orla de Santa Catarina" width="1536" height="1024" fetchpriority="high">
+              <source media="(max-width: 767px)" srcset="img/hero-sc-1080.webp">
+              <img src="img/hero-sc-2400.webp" alt="Vista panorâmica do litoral de Santa Catarina atendido pela Santos Receptivo & Turismo" width="1600" height="1200" fetchpriority="high">
             </picture>
             <div class="hero-media-caption">
-              <span><strong>Frota Executiva até 6 lugares</strong> · Tiggo 8 Pro, BYD Song, BYD King &amp; Virtus TSI</span>
+              <span><strong>Frota Executiva até 6 lugares</strong> · SUVs e Sedãs Executivos Climatizados</span>
               <span>Itapema · SC</span>
             </div>
           </div>
@@ -1190,7 +1239,7 @@
               Passeios privativos e transfers executivos em <span class="serif-italic">Santa Catarina</span>.
             </h1>
             <p class="hero-sub">
-              Conforto de primeira classe em carros de até 6 lugares com o acompanhamento de <strong>Márcio Santos</strong> — motorista executivo e guia de turismo.
+              Conforto de primeira classe em veículos executivos de até 6 lugares com o acompanhamento de <strong>Márcio Santos</strong> — motorista executivo e guia de turismo.
             </p>
             <div class="hero-actions">
               <a href="#simulador" class="btn-primary">
@@ -1203,7 +1252,7 @@
             <div class="hero-pillars">
               <div class="pillar-item">
                 <strong>Até 6 Lugares</strong>
-                <span>SUVs e Sedans Executivos</span>
+                <span>SUVs e Sedãs Executivos</span>
               </div>
               <div class="pillar-item">
                 <strong>Motorista-Guia</strong>
@@ -1276,7 +1325,7 @@
           <!-- Card 3: Transfers Executivos Aeroportos -->
           <article class="route-card reveal">
             <div class="route-img-wrap">
-              <img src="img/hero-1080.webp" alt="Transfer executivo privativo para aeroportos de Santa Catarina" width="800" height="500" loading="lazy">
+              <img src="img/dest-serra.webp" alt="Estradas panorâmicas e receptivo executivo em Santa Catarina" width="800" height="500" loading="lazy">
               <span class="route-badge">Receptivo VIP</span>
             </div>
             <div class="route-body">
@@ -1341,7 +1390,7 @@
             </div>
             <div class="route-body">
               <h3>Urubici &amp; Florianópolis</h3>
-              <p>Suba a Serra Catarinense até os mirantes e cânions de Urubici em carro executivo ou explore as praias, lagoas e gastronomia da Ilha da Magia.</p>
+              <p>Suba a Serra Catarinense até os mirantes e cânions de Urubici em veículo executivo ou explore as praias, lagoas e gastronomia da Ilha da Magia.</p>
               <div class="route-meta">
                 <span class="route-chip">Viagem Personalizada</span>
                 <span class="route-chip">Guia Credenciado</span>
@@ -1373,8 +1422,8 @@
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
                 </div>
                 <div>
-                  <h3>SUVs até 6 Passageiros &amp; Sedans Executivos</h3>
-                  <p>Frota com <strong>Chery Tiggo 8 Pro</strong> (até 6 lugares), <strong>BYD Song</strong>, <strong>BYD King</strong> e <strong>VW Virtus TSI</strong> com ar digital e amplo espaço para bagagens.</p>
+                  <h3>Frota Executiva até 6 Lugares</h3>
+                  <p><strong>SUVs de 6 lugares e Sedãs Executivos Climatizados</strong> de última geração, higienizados, com poltronas confortáveis e amplo espaço para bagagens.</p>
                 </div>
               </div>
 
@@ -1478,9 +1527,9 @@
               <div>
                 <label class="sim-step-label" for="simPax">4. Quantidade de Passageiros</label>
                 <select id="simPax" class="sim-select">
-                  <option value="1 a 2 passageiros (Sedan Executivo)">1 a 2 passageiros (Sedan Executivo)</option>
-                  <option value="3 a 4 passageiros (Sedan / SUV Executivo)" selected>3 a 4 passageiros (Sedan / SUV Executivo)</option>
-                  <option value="5 a 6 passageiros (SUV 6 Lugares - Tiggo 8)">5 a 6 passageiros (SUV até 6 Lugares)</option>
+                  <option value="1 a 2 passageiros (Veículo Executivo Privativo)">1 a 2 passageiros (Veículo Executivo Privativo)</option>
+                  <option value="3 a 4 passageiros (Sedã / SUV Executivo)" selected>3 a 4 passageiros (Sedã / SUV Executivo)</option>
+                  <option value="5 a 6 passageiros (SUV Executivo até 6 Lugares)">5 a 6 passageiros (SUV Executivo até 6 Lugares)</option>
                   <option value="Grupo acima de 6 pessoas">Grupo acima de 6 pessoas</option>
                 </select>
               </div>
@@ -1514,7 +1563,7 @@
                 </div>
                 <div class="summary-line">
                   <span>Passageiros</span>
-                  <strong id="sumPax">3 a 4 passageiros (Sedan / SUV Executivo)</strong>
+                  <strong id="sumPax">3 a 4 passageiros (Sedã / SUV Executivo)</strong>
                 </div>
               </div>
             </div>
@@ -1535,7 +1584,7 @@
             <span class="section-tag tag-on-dark">Nota Máxima no Google Maps</span>
             <h2 class="section-title">O que dizem as famílias que <span class="serif-italic">viajaram conosco</span>.</h2>
             <p class="section-lead" style="color: var(--text-light-muted);">
-              100% de avaliações 5 estrelas destacando pontualidade, carros impecáveis e o cuidado do Márcio durante os passeios.
+              100% de avaliações 5 estrelas destacando pontualidade, veículos impecáveis e o cuidado do Márcio durante os passeios.
             </p>
           </div>
           <div class="carousel-controls">
@@ -1567,7 +1616,7 @@
             <div>
               <div class="review-stars">★★★★★</div>
               <p class="review-text">
-                "Márcio é um profissional excelente! Atencioso (até com as crianças), respeitoso e tem ótimas dicas e sugestões de passeios e restaurantes. Passei 2 dias com o Márcio e só tenho elogios! O carro impecável e muito confortável!"
+                "Márcio é um profissional excelente! Atencioso (até com as crianças), respeitoso e tem ótimas dicas e sugestões de passeios e restaurantes. Passei 2 dias com o Márcio e só tenho elogios! O veículo impecável e muito confortável!"
               </p>
             </div>
             <div class="review-author">
@@ -1584,7 +1633,7 @@
             <div>
               <div class="review-stars">★★★★★</div>
               <p class="review-text">
-                "Márcio Santos foi super prestativo, pontual e educado. A viagem foi para Pomerode e Blumenau e atua como guia também. O transporte e a condução foram seguros, obedecendo as leis de trânsito, além de super confortável o carro."
+                "Márcio Santos foi super prestativo, pontual e educado. A viagem foi para Pomerode e Blumenau e atua como guia também. O transporte e a condução foram seguros, obedecendo as leis de trânsito, além de super confortável."
               </p>
             </div>
             <div class="review-author">
@@ -1658,7 +1707,7 @@
                   <span class="faq-icon">+</span>
                 </summary>
                 <div class="faq-answer">
-                  Contamos com sedans executivos (VW Virtus TSI e BYD King) e SUVs espaçosos (Chery Tiggo 8 Pro e BYD Song) que acomodam confortavelmente até 6 passageiros, além de soluções sob consulta para grupos maiores.
+                  Contamos com frota executiva climatizada (sedãs executivos e SUVs espaçosos) que acomoda confortavelmente até 6 passageiros, além de soluções sob consulta para grupos maiores.
                 </div>
               </details>
 
@@ -1713,7 +1762,13 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <img src="img/logo-santos.svg" alt="Santos Receptivo & Turismo" width="195" height="42" style="margin-bottom:14px;">
+          <div class="footer-brand">
+            <img src="img/logo-oficial.webp" alt="Logo Santos Receptivo Turismo" width="58" height="58" loading="lazy">
+            <div class="brand-logo-text">
+              <strong style="font-size:1.35rem;">Santos</strong>
+              <span>Receptivo &amp; Turismo</span>
+            </div>
+          </div>
           <p style="max-width:380px; font-size:0.9rem;">
             Transporte executivo privativo até 6 lugares, transfers de aeroportos e passeios guiados nos melhores destinos de Santa Catarina.
           </p>
