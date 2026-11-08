@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 68" fill="none">
+  <!-- Emblem Icon -->
+  <g transform="translate(2, 4)">
+    <rect x="0" y="0" width="58" height="58" rx="14" fill="#0E2B56" stroke="#F5A623" stroke-width="1.5" stroke-opacity="0.45"/>
+    <!-- Sun / Golden arch -->
+    <path d="M14 36 A15 15 0 0 1 44 36" stroke="#F5A623" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="2 3"/>
+    <!-- Location Pin -->
+    <path d="M29 10C23.477 10 19 14.477 19 20C19 27.5 29 37 29 37C29 37 39 27.5 39 20C39 14.477 34.523 10 29 10ZM29 23.5C27.067 23.5 25.5 21.933 25.5 20C25.5 18.067 27.067 16.5 29 16.5C30.933 16.5 32.5 18.067 32.5 20C32.5 21.933 30.933 23.5 29 23.5Z" fill="#F5A623"/>
+    <!-- Executive Road / Coastal Wave -->
+    <path d="M10 43C20 38 38 38 48 43" stroke="#F5A623" stroke-width="3" stroke-linecap="round"/>
+    <path d="M14 48.5C23 44.5 35 44.5 44 48.5" stroke="#38BDF8" stroke-width="2.2" stroke-linecap="round"/>
+  </g>
+  <!-- Brand Typography -->
+  <text x="72" y="36" fill="#FFFFFF" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="28" letter-spacing="-0.02em">Santos</text>
+  <text x="172" y="36" fill="#F5A623" font-family="'Playfair Display', Georgia, serif" font-style="italic" font-weight="600" font-size="16">Santa Catarina</text>
+  <text x="73" y="53" fill="#CBD5E1" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="10.5" letter-spacing="0.22em">RECEPTIVO &amp; TURISMO</text>
+</svg>
